@@ -549,42 +549,22 @@
        </div>
       </div>
      </div>
-    </section>
-   </main><!-- Footer -->
-
- <div>
-  <div class="flex items-center space-x-3 mb-4">
-    
-    <div class="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center p-1">
-      <img 
-        src="https://i.imgur.com/UW0QA8Z.jpg" 
-        alt="Logo"
-        class="max-h-8 object-contain"
-      >
-    </div>
-
-    <div>
-      <span class="font-montserrat font-bold text-lg">JYGA US</span>
-      <span class="text-gold font-montserrat text-xs block">
-        SERVICES INC.
-      </span>
-    </div>
-
-  </div>
-
-  <p class="text-gray-400 text-sm"
-     data-es="Estructuración Estratégica y Gestión Integral de Proyectos"
-     data-en="Strategic Structuring and Comprehensive Project Management">
-     Estructuración Estratégica y Gestión Integral de Proyectos
-  </p>
-</div>
-
-  <p class="text-gray-400 text-sm"
-     data-es="Estructuración Estratégica y Gestión Integral de Proyectos"
-     data-en="Strategic Structuring and Comprehensive Project Management">
-     Estructuración Estratégica y Gestión Integral de Proyectos
-  </p>
-</div>
+    </section> !-- Footer -->
+   <footer class="bg-navy text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+       <div class="flex items-center space-x-3 mb-4">
+        <div class="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center">
+         <svg class="w-6 h-6 text-gold" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 10h6v20H8V10z" fill="currentColor" /> <path d="M16 10h6v12c0 4-2 8-6 8v-4c2 0 3-2 3-4V10z" fill="currentColor" /> <path d="M24 10h8v4h-5v4h4v4h-4v8h-3V10z" fill="currentColor" /> <circle cx="30" cy="28" r="3" fill="currentColor" />
+         </svg>
+        </div>
+        <div><span class="font-montserrat font-bold text-lg">JYGA US</span> <span class="text-gold font-montserrat text-xs block">SERVICES INC.</span>
+        </div>
+       </div>
+       <p class="text-gray-400 text-sm" data-es="Estructuración Estratégica y Gestión Integral de Proyectos" data-en="Strategic Structuring and Comprehensive Project Management">Estructuración Estratégica y Gestión Integral de Proyectos</p>
+      </div>
+      <div>
        <h4 class="font-montserrat font-bold mb-4" data-es="Enlaces Rápidos" data-en="Quick Links">Enlaces Rápidos</h4>
        <nav class="space-y-2"><a href="#quienes-somos" class="block text-gray-400 hover:text-gold transition-colors text-sm" data-es="Quiénes Somos" data-en="About Us">Quiénes Somos</a> <a href="#servicios" class="block text-gray-400 hover:text-gold transition-colors text-sm" data-es="Servicios" data-en="Services">Servicios</a> <a href="#cumplimiento" class="block text-gray-400 hover:text-gold transition-colors text-sm" data-es="Cumplimiento" data-en="Compliance">Cumplimiento</a> <a href="#contacto" class="block text-gray-400 hover:text-gold transition-colors text-sm" data-es="Contacto" data-en="Contact">Contacto</a>
        </nav>
@@ -643,8 +623,24 @@
           el.textContent = el.getAttribute(`data-${lang}`);
         }
       });
+      
+      // Update language buttons
+      const esBtn = document.getElementById('lang-es');
+      const enBtn = document.getElementById('lang-en');
+      if (lang === 'es') {
+        esBtn.classList.add('bg-navy', 'text-white');
+        esBtn.classList.remove('text-navy', 'hover:text-gold');
+        enBtn.classList.remove('bg-navy', 'text-white');
+        enBtn.classList.add('text-navy', 'hover:text-gold');
+      } else {
+        enBtn.classList.add('bg-navy', 'text-white');
+        enBtn.classList.remove('text-navy', 'hover:text-gold');
+        esBtn.classList.remove('bg-navy', 'text-white');
+        esBtn.classList.add('text-navy', 'hover:text-gold');
+      }
+    }
 
-     // Mobile menu toggle
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuBtn.addEventListener('click', () => {
@@ -882,4 +878,4 @@
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d3bb5fda2ef31ce',t:'MTc3MjA2OTc4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-     
+   </main>
