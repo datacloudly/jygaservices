@@ -644,23 +644,7 @@
         }
       });
       
-      // Update language buttons
-      const esBtn = document.getElementById('lang-es');
-      const enBtn = document.getElementById('lang-en');
-      if (lang === 'es') {
-        esBtn.classList.add('bg-navy', 'text-white');
-        esBtn.classList.remove('text-navy', 'hover:text-gold');
-        enBtn.classList.remove('bg-navy', 'text-white');
-        enBtn.classList.add('text-navy', 'hover:text-gold');
-      } else {
-        enBtn.classList.add('bg-navy', 'text-white');
-        enBtn.classList.remove('text-navy', 'hover:text-gold');
-        esBtn.classList.remove('bg-navy', 'text-white');
-        esBtn.classList.add('text-navy', 'hover:text-gold');
-      }
-    }
-
-    // Mobile menu toggle
+     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuBtn.addEventListener('click', () => {
