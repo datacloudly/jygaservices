@@ -1148,5 +1148,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-</script></body>
+</script>     
+     
+     
+     
+     <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btnEn = document.getElementById('lang-en');
+    const btnEs = document.getElementById('lang-es');
+
+    // 1. Función para cambiar el idioma
+    function setLanguage(lang) {
+        const elements = document.querySelectorAll('[data-en]');
+        elements.forEach(el => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        });
+
+        // 2. Actualizar estilos de los botones
+        if (lang === 'en') {
+            btnEn.classList.add('bg-navy', 'text-white');
+            btnEn.classList.remove('text-navy');
+            btnEs.classList.remove('bg-navy', 'text-white');
+            btnEs.classList.add('text-navy');
+        } else {
+            btnEs.classList.add('bg-navy', 'text-white');
+            btnEs.classList.remove('text-navy');
+            btnEn.classList.remove('bg-navy', 'text-white');
+            btnEn.classList.add('text-navy');
+        }
+    }
+
+    // 3. EVENTOS DE CLIC (Para que el selector funcione)
+    btnEn.addEventListener('click', () => setLanguage('en'));
+    btnEs.addEventListener('click', () => setLanguage('es'));
+
+    // 4. EJECUCIÓN POR DEFECTO AL ABRIR
+    setLanguage('en'); 
+});
+</script>
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     </body>
 </html>
